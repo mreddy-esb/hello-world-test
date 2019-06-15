@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<flow name="hello-world-testFlow" doc:id="c14df583-0a85-4832-b836-830b21efde1d" >
+		<http:listener doc:name="Listener" doc:id="71857fc4-8e69-4ed2-a4d2-8e59b30b6282" config-ref="HTTP_Listener_config" path="/hello-world-test"/>
+		<ee:transform doc:name="Transform Message" doc:id="b4a9738b-af2e-4fb1-833a-73004b2cbe80" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+  message: "Hello world"
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="8adfbb31-2fbf-4fb5-be5d-0353ed45bae6" message="#[payload]"/>
+	</flow>
+</mule>
