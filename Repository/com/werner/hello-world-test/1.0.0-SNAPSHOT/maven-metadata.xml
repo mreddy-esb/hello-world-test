@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.werner</groupId>
+  <artifactId>hello-world-test</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20190616.012041</timestamp>
+      <buildNumber>11</buildNumber>
+    </snapshot>
+    <lastUpdated>20190616012041</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.0.0-20190616.012041-11</value>
+        <updated>20190616012041</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>mule-application</classifier>
+        <extension>jar</extension>
+        <value>1.0.0-20190616.012040-11</value>
+        <updated>20190616012041</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
